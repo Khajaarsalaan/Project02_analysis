@@ -1,4 +1,4 @@
----Inspecting Data  with microst SQL server by Khaja Arsalaan
+---Inspecting Data with microsoft SQL server by Khaja Arsalaan
 
 Select * from PortfolioProject03..sales_data_sample;
 
