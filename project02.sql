@@ -57,3 +57,14 @@ from PortfolioProject03..sales_data_sample
 where country = 'USA'
 group by  country, YEAR_ID, PRODUCTLINE
 order by 4 desc
+
+-- Using Case Statement to analyze that the sale is above 10,000 or not. If the sale is above 10,000 then naming it as high sale else low sale
+Select country,PRODUCTLINE, YEAR_ID,sum(sales),
+case 
+when Sales > 10000 then 'High Sale'
+else 'Low sale'
+end sale_type
+From PortfolioProject03..sales_data_sample
+where country = 'USA' and PRODUCTLINE= 'Classic Cars'
+group by  country, PRODUCTLINE, YEAR_ID, sales
+order by sale_type
